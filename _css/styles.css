@@ -10,20 +10,19 @@ html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}artic
 
 html {
     color: #404040;
-    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Verdana, 'ＭＳ Ｐゴシック', sans-serif;
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro', Meiryo, 'メイリオ', Verdana, 'ＭＳ Ｐゴシック', sans-serif;
 }
 
 a {
-    color: #ff0000;
+    color: #f00;
     text-decoration: underline;
     -webkit-transition: color 200ms ease;
     -ms-transition: color 200ms ease;
     transition: color 200ms ease;
 }
 
-body a:hover,
-body a:focus {
-    color: #0000ff;
+body a:hover {
+    color: #00f;
     text-decoration: none;
 }
 
