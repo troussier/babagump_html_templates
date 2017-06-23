@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
 //ブレイクポイント
-$breakpoint-up: (
-  'md': '(min-width: 768px)',
-  'lg': '(min-width: 1080px)',
-  'xl': '(min-width: 1440px)',
+$breakpoints: (
+  'sm': 'screen and (min-width: 400px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 1000px)',
+  'xl': 'screen and (min-width: 1200px)',
 ) !default;
 
 $font-size: 16px;
