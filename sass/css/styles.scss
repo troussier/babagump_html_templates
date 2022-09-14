@@ -1,12 +1,9 @@
 @charset "UTF-8";
 
-@import '../_base/variable';
-@import '../_base/function';
-@import '../_base/mixin';
-@import '../_base/normalize';
-@import '../_base/base';
+@use "../_base/normalize";
+@use "../_base/base";
 
-@import '../_layout/layout';
+@use "../_layout/layout";
 
-@import '../_object/project';
-@import '../_object/utility';
+@use "../_object/project";
+@use "../_object/utility";

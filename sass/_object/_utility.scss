@@ -1,17 +1,20 @@
 @charset "UTF-8";
 
+@use "../_base/variable";
+@use "../_base/mixin";
+
 // レスポンシブ非表示
-@each $label, $value in $breakpoints-up {
+@each $label, $value in variable.$breakpoints-up {
     .u-mq-up-#{$label}-only {
-        @include mq-down(#{$label}) {
+        @include mixin.mq-down(#{$label}) {
             display: none !important;
         }
     }
 }
 
-@each $label, $value in $breakpoints-down {
+@each $label, $value in variable.$breakpoints-down {
     .u-mq-down-#{$label}-only {
-        @include mq-up(#{$label}) {
+        @include mixin.mq-up(#{$label}) {
             display: none !important;
         }
     }
@@ -61,11 +64,11 @@
 }
 
 .u-text-normal-color {
-    color: $color-text !important;
+    color: variable.$color-text !important;
 }
 
 .u-text-theme-color {
-    color: $color-theme !important;
+    color: variable.$color-theme !important;
 }
 
 $value: 0;
@@ -96,7 +99,7 @@ $value: 0;
     .u-pl-#{$value} {
         padding-left: #{$value}px !important;
     }
-    @include mq-up() {
+    @include mixin.mq-up() {
         // PCマージン
         .u-pc-mt-#{$value} {
             margin-top: #{$value}px !important;
@@ -125,7 +128,7 @@ $value: 0;
         }
     }
     // SPマージン
-    @include mq-down() {
+    @include mixin.mq-down() {
         .u-sp-mt-#{$value} {
             margin-top: #{$value}px !important;
         }
@@ -192,7 +195,7 @@ $value: 0;
 $value: 50;
 @while $value <= 300 {
     .u-sp-width-#{$value} {
-        @include mq-down() {
+        @include mixin.mq-down() {
             max-width: #{$value}px !important;
         }
     }
@@ -258,7 +261,7 @@ $value: 50;
 // このクラスのあたった要素の中の<br>タグを無効にする
 // ========================================
 .u-pc-br-none {
-    @include mq-up() {
+    @include mixin.mq-up() {
         br {
             display: none;
         }
