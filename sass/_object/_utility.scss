@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-@use "../_base/variable";
+@use "../_base/variable" as var;
 @use "../_base/mixin";
 
 // レスポンシブ非表示
-@each $label, $value in variable.$breakpoints-up {
+@each $label, $value in var.$breakpoints-up {
     .u-mq-up-#{$label}-only {
         @include mixin.mq-down(#{$label}) {
             display: none !important;
@@ -12,7 +12,7 @@
     }
 }
 
-@each $label, $value in variable.$breakpoints-down {
+@each $label, $value in var.$breakpoints-down {
     .u-mq-down-#{$label}-only {
         @include mixin.mq-up(#{$label}) {
             display: none !important;
@@ -64,11 +64,11 @@
 }
 
 .u-text-normal-color {
-    color: variable.$color-text !important;
+    color: var.$color-text !important;
 }
 
 .u-text-theme-color {
-    color: variable.$color-theme !important;
+    color: var.$color-theme !important;
 }
 
 $value: 0;

@@ -1,16 +1,16 @@
 @charset "UTF-8";
 
-@use "../_base/variable";
+@use "../_base/variable" as var;
 @use "sass:map";
 
 @mixin mq-up($breakpoint: md) {
-    @media #{map.get(variable.$breakpoints-up, $breakpoint)} {
+    @media #{map.get(var.$breakpoints-up, $breakpoint)} {
         @content;
     }
 }
 
 @mixin mq-down($breakpoint: md) {
-    @media #{map.get(variable.$breakpoints-down, $breakpoint)} {
+    @media #{map.get(var.$breakpoints-down, $breakpoint)} {
         @content;
     }
 }

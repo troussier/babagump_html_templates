@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-@use "../_base/variable";
+@use "../_base/variable" as var;
 @use "../_base/mixin";
 
 .l-frame {
-    margin: 0 variable.$site-padding;
+    margin: 0 var.$site-padding;
     @include mixin.mq-up() {
         max-width: 1360px; // 1064px + 148px + 148px
         margin: 0 auto;

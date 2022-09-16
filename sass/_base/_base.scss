@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-@use "../_base/variable";
+@use "../_base/variable" as var;
+@use "../_base/mixin";
 
 *,
 *:before,
@@ -9,9 +10,9 @@
 }
 
 html {
-    color: variable.$color-text;
-    font-size: variable.$font-size;
-    font-family: variable.$font-family-sans-serif;
+    color: var.$color-text;
+    font-size: var.$font-size;
+    font-family: var.$font-family-sans-serif;
     line-height: 1.5;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -19,12 +20,12 @@ html {
 }
 
 a {
-    color: variable.$color-link;
+    color: var.$color-link;
     text-decoration: underline;
     transition: color 200ms ease;
     @include mixin.mq-up() {
         body &:hover {
-            color: variable.$color-link-hover;
+            color: var.$color-link-hover;
             text-decoration: none;
         }
     }
